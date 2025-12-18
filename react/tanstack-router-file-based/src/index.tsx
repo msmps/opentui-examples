@@ -25,6 +25,7 @@ declare module "@tanstack/react-router" {
   }
 }
 
+// App component that provides the router
 function App() {
   return <RouterProvider router={router} />;
 }

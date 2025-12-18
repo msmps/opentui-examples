@@ -1,5 +1,8 @@
-import type { KeyEvent } from "@opentui/core";
-import { createCliRenderer, TextAttributes } from "@opentui/core";
+import {
+  createCliRenderer,
+  type KeyEvent,
+  TextAttributes,
+} from "@opentui/core";
 import { createRoot, useKeyboard, useRenderer } from "@opentui/react";
 import {
   createMemoryRouter,
@@ -9,12 +12,13 @@ import {
   useNavigate,
 } from "react-router";
 
-// Layout component with navigation
-function Layout() {
+// Root layout component with navigation
+function RootLayout() {
   const renderer = useRenderer();
   const navigate = useNavigate();
   const location = useLocation();
 
+  // Handle keyboard navigation
   useKeyboard((event: KeyEvent) => {
     if (event.name === "1") navigate("/");
     if (event.name === "2") navigate("/about");
@@ -55,21 +59,28 @@ function Layout() {
         border={["top"]}
       >
         <text
-          fg={location.pathname === "/" ? "cyan" : undefined}
-          attributes={location.pathname === "/" ? TextAttributes.BOLD : 0}
+          attributes={
+            location.pathname === "/"
+              ? TextAttributes.BOLD | TextAttributes.UNDERLINE
+              : TextAttributes.NONE
+          }
         >
           [1] Home
         </text>
         <text
-          fg={location.pathname === "/about" ? "cyan" : undefined}
-          attributes={location.pathname === "/about" ? TextAttributes.BOLD : 0}
+          attributes={
+            location.pathname === "/about"
+              ? TextAttributes.BOLD | TextAttributes.UNDERLINE
+              : TextAttributes.NONE
+          }
         >
           [2] About
         </text>
         <text
-          fg={location.pathname === "/settings" ? "cyan" : undefined}
           attributes={
-            location.pathname === "/settings" ? TextAttributes.BOLD : 0
+            location.pathname === "/settings"
+              ? TextAttributes.BOLD | TextAttributes.UNDERLINE
+              : TextAttributes.NONE
           }
         >
           [3] Settings
@@ -80,7 +91,7 @@ function Layout() {
   );
 }
 
-// Home screen component
+// Screen components
 function Home() {
   return (
     <box alignItems="center" justifyContent="center" flexGrow={1}>
@@ -92,7 +103,6 @@ function Home() {
   );
 }
 
-// About screen component
 function About() {
   return (
     <box flexDirection="column" flexGrow={1}>
@@ -106,7 +116,6 @@ function About() {
   );
 }
 
-// Settings screen component
 function Settings() {
   return (
     <box flexDirection="column" flexGrow={1}>
@@ -124,7 +133,6 @@ function Settings() {
   );
 }
 
-// Not Found screen component
 function NotFound() {
   return (
     <box alignItems="center" justifyContent="center" flexGrow={1}>
@@ -140,11 +148,11 @@ function NotFound() {
   );
 }
 
-// Create the router with routes
+// Route definitions
 const router = createMemoryRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: <RootLayout />,
     children: [
       { index: true, element: <Home /> },
       { path: "about", element: <About /> },

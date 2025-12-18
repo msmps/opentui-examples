@@ -1,4 +1,4 @@
-import { TextAttributes, type KeyEvent } from "@opentui/core";
+import { type KeyEvent, TextAttributes } from "@opentui/core";
 import { useKeyboard, useRenderer } from "@opentui/react";
 import {
   createRootRoute,
@@ -27,6 +27,7 @@ function NotFound() {
   );
 }
 
+// Root layout component with navigation
 function RootLayout() {
   const router = useRouter();
   const renderer = useRenderer();
@@ -52,7 +53,9 @@ function RootLayout() {
         borderStyle="single"
         border={["bottom"]}
       >
-        <text attributes={TextAttributes.BOLD}>TanStack Router File-Based Demo</text>
+        <text attributes={TextAttributes.BOLD}>
+          TanStack Router File-Based Demo
+        </text>
         <text attributes={TextAttributes.DIM}>Current: {currentPath}</text>
       </box>
 

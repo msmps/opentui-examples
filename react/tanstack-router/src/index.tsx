@@ -1,7 +1,7 @@
 import {
   createCliRenderer,
-  TextAttributes,
   type KeyEvent,
+  TextAttributes,
 } from "@opentui/core";
 import { createRoot, useKeyboard, useRenderer } from "@opentui/react";
 import {
@@ -15,10 +15,7 @@ import {
   useRouterState,
 } from "@tanstack/react-router";
 
-// ============================================
-// Root Layout Component
-// ============================================
-
+// Root layout component with navigation
 function RootLayout() {
   const router = useRouter();
   const renderer = useRenderer();
@@ -96,10 +93,7 @@ function RootLayout() {
   );
 }
 
-// ============================================
-// screen Components
-// ============================================
-
+// Screen components
 function Home() {
   return (
     <box alignItems="center" justifyContent="center" flexGrow={1}>
@@ -156,10 +150,7 @@ function NotFound() {
   );
 }
 
-// ============================================
-// Route Definitions
-// ============================================
-
+// Route definitions
 const rootRoute = createRootRoute({
   component: RootLayout,
   notFoundComponent: NotFound,
@@ -190,10 +181,6 @@ const routeTree = rootRoute.addChildren([
   settingsRoute,
 ]);
 
-// ============================================
-// Router Setup with Memory History
-// ============================================
-
 // Use memory history since we're in a terminal environment (no browser)
 const memoryHistory = createMemoryHistory({
   initialEntries: ["/"],
@@ -211,10 +198,7 @@ declare module "@tanstack/react-router" {
   }
 }
 
-// ============================================
-// App Entry Point
-// ============================================
-
+// App component that provides the router
 function App() {
   return <RouterProvider router={router} />;
 }
