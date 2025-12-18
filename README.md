@@ -1,13 +1,20 @@
 # OpenTUI Examples
 
-A collection of terminal applications starters built with [OpenTUI](https://opentui.com).
+A collection of terminal application starters built with [OpenTUI](https://opentui.com).
 
-## Examples
+## Table of Contents
 
-| Example                                                          | Description                             | Router                   |
-| ---------------------------------------------------------------- | --------------------------------------- | ------------------------ |
-| [react-router](./react/react-router)                             | React Router v7 integration             | `react-router`           |
-| [tanstack-router](./react/tanstack-router)                       | TanStack Router with code-based routes  | `@tanstack/react-router` |
+- [React](#react)
+  - [react-router](#react-router)
+  - [tanstack-router](#tanstack-router)
+  - [tanstack-router-file-based](#tanstack-router-file-based)
+
+## React
+
+| Example | Description | Router |
+| ------- | ----------- | ------ |
+| [react-router](./react/react-router) | React Router v7 integration | `react-router` |
+| [tanstack-router](./react/tanstack-router) | TanStack Router with code-based routes | `@tanstack/react-router` |
 | [tanstack-router-file-based](./react/tanstack-router-file-based) | TanStack Router with file-based routing | `@tanstack/react-router` |
 
 ## Quick Start
@@ -15,7 +22,7 @@ A collection of terminal applications starters built with [OpenTUI](https://open
 Each example can be run with:
 
 ```bash
-cd react/<example-name>
+cd <framework>/<example-name>
 bun install
 bun dev
 ```
