@@ -1,0 +1,26 @@
+{
+  "name": "tanstack-router-file-based-example",
+  "module": "src/index.tsx",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "generate-routes": "tsr generate",
+    "watch-routes": "tsr watch",
+    "dev": "bun run generate-routes && bun run --watch src/index.tsx"
+  },
+  "devDependencies": {
+    "@tanstack/router-cli": "^1.141.7",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/preset-typescript": "^7.28.5",
+    "@opentui/core": "^0.1.61",
+    "@opentui/solid": "^0.1.61",
+    "@tanstack/solid-router": "^1.141.6",
+    "solid-js": "^1.9.5"
+  }
+}
