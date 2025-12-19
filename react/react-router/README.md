@@ -1,14 +1,11 @@
-# react
+# React + React Router
 
-To install dependencies:
+An [OpenTUI](https://opentui.com) example using React with [React Router v7](https://reactrouter.com/).
+
+## Quick Start
 
 ```bash
 bun install
-```
-
-To run:
-
-```bash
 bun dev
 ```
 

@@ -8,6 +8,9 @@ A collection of terminal application starters built with [OpenTUI](https://opent
   - [react-router](#react-router)
   - [tanstack-router](#tanstack-router)
   - [tanstack-router-file-based](#tanstack-router-file-based)
+- [Solid](#solid)
+  - [tanstack-router](#tanstack-router-1)
+  - [tanstack-router-file-based](#tanstack-router-file-based-1)
 
 ## React
 
@@ -16,6 +19,13 @@ A collection of terminal application starters built with [OpenTUI](https://opent
 | [react-router](./react/react-router) | React Router v7 integration | `react-router` |
 | [tanstack-router](./react/tanstack-router) | TanStack Router with code-based routes | `@tanstack/react-router` |
 | [tanstack-router-file-based](./react/tanstack-router-file-based) | TanStack Router with file-based routing | `@tanstack/react-router` |
+
+## Solid
+
+| Example | Description | Router |
+| ------- | ----------- | ------ |
+| [tanstack-router](./solid/tanstack-router) | TanStack Router with code-based routes | `@tanstack/solid-router` |
+| [tanstack-router-file-based](./solid/tanstack-router-file-based) | TanStack Router with file-based routing | `@tanstack/solid-router` |
 
 ## Quick Start
 

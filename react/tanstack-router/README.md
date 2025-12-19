@@ -1,14 +1,11 @@
-# react
+# React + TanStack Router
 
-To install dependencies:
+An [OpenTUI](https://opentui.com) example using React with [TanStack Router](https://tanstack.com/router) (code-based routes).
+
+## Quick Start
 
 ```bash
 bun install
-```
-
-To run:
-
-```bash
 bun dev
 ```
 
