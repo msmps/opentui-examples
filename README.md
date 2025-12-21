@@ -5,12 +5,12 @@ A collection of terminal application starters built with [OpenTUI](https://opent
 ## Table of Contents
 
 - [React](#react)
-  - [react-router](#react-router)
-  - [tanstack-router](#tanstack-router)
-  - [tanstack-router-file-based](#tanstack-router-file-based)
+  - [react-router](./react/react-router)
+  - [tanstack-router](./react/tanstack-router)
+  - [tanstack-router-file-based](./react/tanstack-router-file-based)
 - [Solid](#solid)
-  - [tanstack-router](#tanstack-router-1)
-  - [tanstack-router-file-based](#tanstack-router-file-based-1)
+  - [tanstack-router](./solid/tanstack-router)
+  - [tanstack-router-file-based](./solid/tanstack-router-file-based)
 
 ## React
 
