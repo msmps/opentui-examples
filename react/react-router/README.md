@@ -5,6 +5,12 @@ An [OpenTUI](https://opentui.com) example using React with [React Router v7](htt
 ## Quick Start
 
 ```bash
+bunx create-tui@latest -t msmps/opentui-examples/react/react-router
+```
+
+Or if you've already cloned this template:
+
+```bash
 bun install
 bun dev
 ```
