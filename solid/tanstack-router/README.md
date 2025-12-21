@@ -5,6 +5,12 @@ An [OpenTUI](https://opentui.com) example using SolidJS with [TanStack Router](h
 ## Quick Start
 
 ```bash
+bunx create-tui@latest -t msmps/opentui-examples/solid/tanstack-router
+```
+
+Or if you've already cloned this template:
+
+```bash
 bun install
 bun dev
 ```
